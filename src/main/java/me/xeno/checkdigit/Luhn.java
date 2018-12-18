@@ -8,7 +8,7 @@ public class Luhn {
     /**
      * Calculate a check digit.
      *
-     * @param numberStr The digits of string without check digit.
+     * @param numberStr The digits of string without a check digit.
      * @return A check digit.
      */
     public String calculateCheckDigit(String numberStr) {
@@ -39,9 +39,10 @@ public class Luhn {
     }
 
     /**
-     * Check the code.
+     * This function takes a code with a check digit appended to the end,
+     * and returns true if the code passes the LUHN check.
      *
-     * @param code The code with check digit.
+     * @param code The code with a check digit.
      * @return true or false.
      */
     public boolean isValid(String code) {
@@ -56,10 +57,10 @@ public class Luhn {
     }
 
     /**
-     * Generate a code with check digit.
+     * Generate a code with a check digit appended to the end.
      *
-     * @param numberStr The digits of string without check digit.
-     * @return A code with check digit.
+     * @param numberStr The digits of string without a check digit.
+     * @return A code with a check digit.
      */
     public String generateCode(String numberStr) {
 
