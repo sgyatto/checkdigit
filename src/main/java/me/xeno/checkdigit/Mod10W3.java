@@ -18,21 +18,19 @@ public class Mod10W3 {
         }
 
         long sum = 0;
-        int position = 1;
 
-        while (position <= numberStr.length()) {
+        for (int i = 1; i <= numberStr.length(); i++) {
 
-            int digit = Character.digit(numberStr.charAt(numberStr.length() - position), 10);
+            int digit = Character.digit(numberStr.charAt(numberStr.length() - i), 10);
 
             // Checking Number String
             if (digit < 0) throw new NumberFormatException();
 
-            if (position % 2 != 0) {
+            if (i % 2 != 0) {
                 sum += (digit * 3);
             } else {
                 sum += digit;
             }
-            position++;
         }
 
         long mod = sum % 10;
