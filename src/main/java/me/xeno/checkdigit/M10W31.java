@@ -3,7 +3,7 @@ package me.xeno.checkdigit;
 /**
  * This class calculates a check digit with Modulus 10, Weight 3:1 algorithm.
  */
-public class Mod10W3 {
+public class M10W31 {
 
     /**
      * Calculate a check digit.
