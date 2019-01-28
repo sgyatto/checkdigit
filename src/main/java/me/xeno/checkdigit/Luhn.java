@@ -26,7 +26,7 @@ public class Luhn {
             // Checking Number String
             if (digit < 0) throw new NumberFormatException();
 
-            if (i % 2 == 0) {
+            if (i % 2 != 0) {
                 int doubleVal = digit * 2;
                 sum += (doubleVal > 9) ? (doubleVal - 9) : doubleVal;
             } else {
