@@ -8,35 +8,36 @@ class LuhnTest {
 
     @Test
     void calculateCheckDigit() {
-        Luhn luhn = new Luhn();
-        assertEquals("2", luhn.calculateCheckDigit("4"));
-        assertEquals("9", luhn.calculateCheckDigit("425"));
-        assertEquals("9", luhn.calculateCheckDigit("0425"));
-        assertEquals("7", luhn.calculateCheckDigit("176048"));
-        assertEquals("3", luhn.calculateCheckDigit("20151119"));
+        CheckDigitService checkDigit = new Luhn();
+        assertEquals("2", checkDigit.calculate("4"));
+        assertEquals("9", checkDigit.calculate("425"));
+        assertEquals("9", checkDigit.calculate("0425"));
+        assertEquals("7", checkDigit.calculate("176048"));
+        assertEquals("3", checkDigit.calculate("20151119"));
         // when check digit is "0"
-        assertEquals("0", luhn.calculateCheckDigit("20151149"));
+        assertEquals("0", checkDigit.calculate("20151149"));
     }
 
     @Test
     void calculateCheckDigitWithInvalidArgument() {
-        Luhn luhn = new Luhn();
-        assertThrows(IllegalArgumentException.class, () -> luhn.calculateCheckDigit(null));
-        assertThrows(IllegalArgumentException.class, () -> luhn.calculateCheckDigit(""));
-        assertThrows(NumberFormatException.class, () -> luhn.calculateCheckDigit("0425あ"));
+        CheckDigitService checkDigit = new Luhn();
+        assertThrows(IllegalArgumentException.class, () -> checkDigit.calculate(null));
+        assertThrows(IllegalArgumentException.class, () -> checkDigit.calculate(""));
+        assertThrows(NumberFormatException.class, () -> checkDigit.calculate("0425あ"));
     }
 
     @Test
     void isValid() {
-        Luhn luhn = new Luhn();
-        assertTrue(luhn.isValid("201511490"));
-        assertFalse(luhn.isValid("201511480"));
+        CheckDigitService checkDigit = new Luhn();
+        assertTrue(checkDigit.isValid("201511490"));
+        assertFalse(checkDigit.isValid("201511480"));
     }
 
     @Test
     void isValidWithInvalidArgument() {
-        Luhn luhn = new Luhn();
-        assertThrows(IllegalArgumentException.class, () -> luhn.isValid(null));
-        assertThrows(IllegalArgumentException.class, () -> luhn.isValid(""));
+        CheckDigitService checkDigit = new Luhn();
+        assertThrows(IllegalArgumentException.class, () -> checkDigit.isValid(null));
+        assertThrows(IllegalArgumentException.class, () -> checkDigit.isValid(""));
+        assertThrows(IllegalArgumentException.class, () -> checkDigit.isValid("1"));
     }
 }
