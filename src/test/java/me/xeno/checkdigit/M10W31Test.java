@@ -36,17 +36,4 @@ class M10W31Test {
         assertThrows(IllegalArgumentException.class, () -> m10W31.isValid(null));
         assertThrows(IllegalArgumentException.class, () -> m10W31.isValid(""));
     }
-
-    @Test
-    void generateCode() {
-        M10W31 m10W31 = new M10W31();
-        assertEquals("4901234567894", m10W31.generateCode("490123456789"));
-    }
-
-    @Test
-    void generateCodeWithInvalidArgument() {
-        M10W31 m10W31 = new M10W31();
-        assertThrows(IllegalArgumentException.class, () -> m10W31.generateCode(null));
-        assertThrows(IllegalArgumentException.class, () -> m10W31.generateCode(""));
-    }
 }

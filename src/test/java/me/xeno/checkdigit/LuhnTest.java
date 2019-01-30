@@ -39,17 +39,4 @@ class LuhnTest {
         assertThrows(IllegalArgumentException.class, () -> luhn.isValid(null));
         assertThrows(IllegalArgumentException.class, () -> luhn.isValid(""));
     }
-
-    @Test
-    void generateCode() {
-        Luhn luhn = new Luhn();
-        assertEquals("1762483", luhn.generateCode("176248"));
-    }
-
-    @Test
-    void generateCodeWithInvalidArgument() {
-        Luhn luhn = new Luhn();
-        assertThrows(IllegalArgumentException.class, () -> luhn.generateCode(null));
-        assertThrows(IllegalArgumentException.class, () -> luhn.generateCode(""));
-    }
 }

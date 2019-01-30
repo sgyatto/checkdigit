@@ -54,19 +54,4 @@ public class M10W31 {
 
         return checkDigit.equals(calculateCheckDigit(code.substring(0, code.length() - 1)));
     }
-
-    /**
-     * Generate a code with a check digit appended to the end.
-     *
-     * @param numberStr The digits of string without a check digit.
-     * @return A code with a check digit.
-     */
-    public String generateCode(String numberStr) {
-
-        if (numberStr == null || numberStr.isEmpty()) {
-            throw new IllegalArgumentException();
-        }
-
-        return numberStr + calculateCheckDigit(numberStr);
-    }
 }
