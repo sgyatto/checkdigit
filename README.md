@@ -1,2 +1,2 @@
 # checkdigit
-This module calculates the Modulus 10.
+This module calculates a check digit.
