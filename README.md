@@ -19,4 +19,4 @@ checkDigit.isValid("1760487"); // => true
 
 ## License
 
-[MIT][license]
+[MIT](/LICENSE)
