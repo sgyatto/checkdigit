@@ -22,12 +22,14 @@ class LuhnTest {
         CheckDigitService checkDigit = new Luhn();
         assertThrows(IllegalArgumentException.class, () -> checkDigit.calculate(null));
         assertThrows(IllegalArgumentException.class, () -> checkDigit.calculate(""));
-        assertThrows(NumberFormatException.class, () -> checkDigit.calculate("0425あ"));
+        assertThrows(NumberFormatException.class, () -> checkDigit.calculate("0425a"));
     }
 
     @Test
     void isValid() {
         CheckDigitService checkDigit = new Luhn();
+        assertTrue(checkDigit.isValid("1760487"));
+        assertFalse(checkDigit.isValid("1760486"));
         assertTrue(checkDigit.isValid("201511490"));
         assertFalse(checkDigit.isValid("201511480"));
     }

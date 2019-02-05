@@ -21,7 +21,7 @@ class M11W27Test {
         CheckDigitService checkDigit = new M11W27();
         assertThrows(IllegalArgumentException.class, () -> checkDigit.calculate(null));
         assertThrows(IllegalArgumentException.class, () -> checkDigit.calculate(""));
-        assertThrows(NumberFormatException.class, () -> checkDigit.calculate("0425あ"));
+        assertThrows(NumberFormatException.class, () -> checkDigit.calculate("0425a"));
     }
 
     @Test
