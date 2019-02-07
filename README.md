@@ -1,5 +1,7 @@
 # checkdigit
 
+[![Build Status](https://travis-ci.org/sgyatto/checkdigit.svg?branch=master)](https://travis-ci.org/sgyatto/checkdigit)
+
 ## Description
 
 This module calculates a check digit.
