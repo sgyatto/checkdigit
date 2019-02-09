@@ -12,3 +12,14 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar {
+    archiveBaseName = 'checkdigit'
+    archiveVersion = '0.1.0'
+    manifest {
+        attributes(
+            'Created-By': '1.8.0_201 (Oracle Corporation)',
+            'Name': 'me/xeno/checkdigit/'
+        )
+    }
+}
