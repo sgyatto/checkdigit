@@ -6,10 +6,10 @@
 
 This module calculates a check digit.
 
-- Luhn
-- Modulus 10, Weight 3:1
-- Modulus 11, Weight 2~7
-- Damm
+- Luhn(Luhn)
+- Modulus 10, Weight 3:1(M10W31)
+- Modulus 11, Weight 2~7(M11W27)
+- Damm(Damm)
 
 ## Synopsis
 
